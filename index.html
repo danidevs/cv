@@ -6,7 +6,9 @@
     <title>Currículo</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -15,22 +17,58 @@
             width: 80%;
             margin: auto;
             overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            background-color: #fafafa;
         }
         header {
-            background: #333;
+            background: linear-gradient(135deg, #4a90e2, #50a3a2);
             color: #fff;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            border-radius: 8px 8px 0 0;
         }
         header h1 {
             margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 10px 0;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header a:hover {
+            color: #ffeb3b;
         }
         section {
             margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: #f0f0f0;
         }
         h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #4a90e2;
             padding-bottom: 5px;
+            color: #4a90e2;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
         ul {
             list-style-type: none;
@@ -38,15 +76,37 @@
         }
         ul li {
             margin-bottom: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 4px solid #4a90e2;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        ul li:hover {
+            background-color: #e0e0e0;
+        }
+        .button {
+            background: linear-gradient(135deg, #4a90e2, #50a3a2);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #50a3a2, #4a90e2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Daniel Rodrigues Silva</h1>
-        <p>E-mail: danidevsilva@gmail.com | Telefone: (12) 98104-2192</p>
-        <p><a href="https://www.linkedin.com/in/danidevs/" target="_blank"style="color: #fff;">LinkedIn: https://www.linkedin.com/in/danidevs/</a></p>
-		 <p><a href="https://github.com/danidevs" target="_blank"style="color: #fff;">GitHub:https://github.com/danidevs</a></p>
+        <p>E-mail: <a href="mailto:danidevsilva@gmail.com">danidevsilva@gmail.com</a> | Telefone: (12) 98104-2192</p>
+        <p><a href="https://www.linkedin.com/in/danidevs/" target="_blank" class="button">LinkedIn</a> <a href="https://github.com/danidevs" target="_blank" class="button">GitHub</a></p>
     </header>
     
     <div class="container">
@@ -61,7 +121,6 @@
                 <li>
                     <strong>99 Pop</strong> - Motorista de App<br>
                     <em>Julho de 2019 - Atual</em><br>
-                   
                 </li>
             </ul>
         </section>
@@ -72,12 +131,10 @@
                 <li>
                     <strong>Escola Estadual Monteiro Lobato</strong> - Ensino Médio<br>
                     <em>Ano de Conclusão: 1999</em><br>
-                   
                 </li>
                 <li>
                     <strong>Faculdade Impacta</strong> - Análise e Desenvolvimento de Sistemas<br>
                     <em>Conclusão prevista: 2026</em><br>
-                    
                 </li>
             </ul>
         </section>
@@ -99,12 +156,12 @@
         <section>
             <h2>Cursos e Certificados Complementares</h2>
             <ul style="color:#000;">
-                <li><a href="https://www.dio.me/certificate/BAF91D67" target="_blank"style="color: #000;">Formação .Net Developer</a></li>
-                <li><a href="https://www.dio.me/certificate/0C3AF02F" target="_blank"style="color: #000;">Deploy e Azure Functions</a></li>
-                <li><a href="https://www.dio.me/certificate/AABE6F7D" target="_blank"style="color: #000;">Frontend com ASP.NET MVC</a></li>
-                <li><a href="https://www.dio.me/certificate/A21DD0D8" target="_blank"style="color: #000;">Bancos de Dados Relacionais e Não Relacionais com SQL Server e MongoDB</a></li>
-                <li><a href="https://www.dio.me/certificate/82041E8D" target="_blank"style="color: #000;">Bootcamp: Pottencial .NET Developer</a></li>
-                <li><a href="https://www.dio.me/certificate/1D39DA16" target="_blank"style="color: #000;">Bootcamp: Decola Tech 2ª edição</a></li>
+                <li><a href="https://www.dio.me/certificate/BAF91D67" target="_blank" class="button">Formação .Net Developer</a></li>
+                <li><a href="https://www.dio.me/certificate/0C3AF02F" target="_blank" class="button">Deploy e Azure Functions</a></li>
+                <li><a href="https://www.dio.me/certificate/AABE6F7D" target="_blank" class="button">Frontend com ASP.NET MVC</a></li>
+                <li><a href="https://www.dio.me/certificate/A21DD0D8" target="_blank" class="button">Bancos de Dados Relacionais e Não Relacionais com SQL Server e MongoDB</a></li>
+                <li><a href="https://www.dio.me/certificate/82041E8D" target="_blank" class="button">Bootcamp: Pottencial .NET Developer</a></li>
+                <li><a href="https://www.dio.me/certificate/1D39DA16" target="_blank" class="button">Bootcamp: Decola Tech 2ª edição</a></li>
             </ul>
         </section>
     </div>
