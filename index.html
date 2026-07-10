@@ -1,219 +1,454 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            background: #f4f4f4;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        }
-        .container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            background-color: #e0e0e0;
-        }
-        header {
-            background: linear-gradient(135deg, #000000, #333333);
-            color: #ffffff;
-            padding: 30px 0;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 1px;
-        }
-        header p {
-            margin: 10px 0;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        header a:hover {
-            color: #cccccc;
-        }
-        section {
-            margin: 20px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            background-color: #f0f0f0;
-        }
-        h2 {
-            border-bottom: 2px solid #000000;
-            padding-bottom: 5px;
-            color: #000000;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-            padding: 10px;
-            background: #ffffff;
-            border-left: 4px solid #000000;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        ul li:hover {
-            background-color: #d9d9d9;
-        }
-        .button {
-            background: linear-gradient(135deg, #000000, #333333);
-            color: #ffffff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background 0.3s ease, transform 0.3s ease;
-            display: inline-block;
-            font-weight: bold;
-        }
-        .button:hover {
-            background: linear-gradient(135deg, #333333, #000000);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Daniel Rodrigues Silva | Software Developer</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+background:#eef2f7;
+color:#333;
+}
+
+header{
+
+background:#002b5c;
+color:white;
+padding:60px;
+text-align:center;
+
+}
+
+header h1{
+
+font-size:48px;
+
+}
+
+header h2{
+
+margin-top:10px;
+font-weight:300;
+
+}
+
+header p{
+
+margin-top:15px;
+
+}
+
+nav{
+
+margin-top:25px;
+
+}
+
+nav a{
+
+background:white;
+color:#002b5c;
+padding:12px 25px;
+margin:10px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+
+}
+
+.container{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:40px;
+
+}
+
+section{
+
+background:white;
+margin-bottom:30px;
+padding:30px;
+border-radius:15px;
+box-shadow:0px 5px 15px rgba(0,0,0,.08);
+
+}
+
+h2{
+
+color:#002b5c;
+margin-bottom:20px;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+
+}
+
+.card{
+
+background:#f7f9fc;
+padding:20px;
+border-radius:12px;
+border-left:6px solid #005baa;
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#005baa;
+color:white;
+text-decoration:none;
+border-radius:30px;
+
+}
+
+footer{
+
+background:#002b5c;
+color:white;
+padding:30px;
+text-align:center;
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <header>
-        <h1>Daniel Rodrigues Silva</h1>
-        <p>E-mail: <a href="mailto:danidevsilva@gmail.com">danidevsilva@gmail.com</a> | Telefone: (12) 98104-2192</p>
-        <p><a href="https://www.linkedin.com/in/danidevs/" target="_blank" class="button">LinkedIn</a> <a href="https://github.com/danidevs" target="_blank" class="button">GitHub</a></p>
-    </header>
-    
-    <div class="container">
-        <section>
-            <h2>Objetivo</h2>
-            <p>Sou desenvolvedor back-end em formação, com foco em .NET e construção de APIs REST utilizando C#. Tenho experiência no desenvolvimento de aplicações que envolvem regras de negócio, organização de código e integração com banco de dados.
 
-Atualmente, venho evoluindo meus conhecimentos em testes automatizados, boas práticas de desenvolvimento e arquitetura de software, buscando construir soluções cada vez mais robustas e escaláveis.
+<header>
 
-Tenho como objetivo ingressar no mercado de tecnologia como desenvolvedor júnior e contribuir com projetos reais, enquanto continuo aprendendo e evoluindo diariamente.</p>
-        </section>
+<h1>Daniel Rodrigues Silva</h1>
 
-        <section>
-            <h2>Experiência Profissional</h2>
-            <ul>
-                <li>
-                    <strong>99 Tecnologia</strong> - Motorista parceiro<br>
-                    <em>Julho de 2019 - Atual</em><br>
-                    <p>Atendimento diário ao público com foco em segurança e qualidade do serviço.
-Organização da rotina e gestão eficiente do tempo.
-Tomada de decisões rápidas em situações adversas.
-Desenvolvimento de disciplina, responsabilidade e comprometimento.</p>
-                </li>
-            </ul>
-        </section>
+<h2>Software Developer • C# • .NET • Java</h2>
 
-        <section>
-            <h2>Educação</h2>
-            <ul>
-                
-                <li>
-                    <strong> FMU </strong> - Centro Universitário<br>
-                    <em>Análise e Desenvolvimento de Sistemas
 
-Previsão de conclusão: 2027
 
-Principais áreas de estudo:
+<p>
 
-Engenharia de Software
-Estrutura de Dados
-Banco de Dados
-Programação Orientada a Objetos
-Desenvolvimento Web
-Computação em Nuvem</em><br>
-                </li>
-            </ul>
-        </section>
+📧 danidevsilva@gmail.com
 
-        <section>
-            <h2>Habilidades e Ferramentas</h2>
-            <ul>
-                <li><strong>Linguagens</strong></li>
-                <p> C#
-                    Java
-                    SQL</p>
-                <li><strong>Frameworks</strong></li>
-                <p> ASP.NET Core MVC
-                    ASP.NET Web API
-                    Spring Boot</p>
-                <li><strong>Banco de Dados</strong></li>
-                <p> SQL Server</p>
-                <li><strong>Ferramentas</strong></li>
-                <p>Git
-                    GitHub
-                    Visual Studio Code
-                    Azure (Fundamentos)</p>
-                    
-                <li><strong>Conhecimentos</strong></li>
-                <p> Programação Orientada a Objetos
-                    APIs REST
-                    Entity Framework Core
-                    Arquitetura MVC
-                    Versionamento com Git
-                    Princípios SOLID
-                    Lógica de Programação</p>
-                
-            </ul>
-        </section>
-        <section>
-            <h2>Projetos</h2>
-            <ul>
-                <li><strong>Sistema de Estacionamento (.NET MVC)</strong></li>
-                <p> Desenvolvimento completo de sistema para controle de entrada e saída de veículos.
-                    Controle financeiro e fluxo de caixa.
-                    Arquitetura MVC.
-                    C# e ASP.NET Core.</p>
-                <li><strong>Sistema de Navegação para Drones (Em desenvolvimento)</strong></li> 
-                <p> Desenvolvimento de arquitetura para navegação autônoma utilizando C#.
-                    Estrutura preparada para futura aplicação em veículos eVTOL.
-                    Estudos envolvendo cálculo de rotas, posicionamento e gerenciamento de voo.</p>   
-            </ul>
-        </section>
+|
 
-        <section>
-            <h2>Cursos e Certificados Complementares</h2>
-            <ul>
-                <li><a href="c:\Users\danie\Downloads\Certificados\certificadoimpacta-Lógica de Programação Aplicada à Linguagem-csharp.pdf.pdf" target="_blank"class="button">🎓 Certificado Impacta</a></li>
-                <li><a href="c:\Users\danie\Downloads\Certificados\certificadosimpacta-dotnet-csharp.pdf.pdf" target="_blank"class="button">🎓 Certificado Impacta</a></li>
-                <li><a href="c:\Users\danie\Downloads\Certificados\certificadoimpacta-Desenvolvimento Web ASP.NET-csharp.pdf.pdf" target="_blank"class="button">🎓 Certificado Impacta</a></li>
-                <li><a href="https://www.dio.me/certificate/BAF91D67" target="_blank" class="button">Formação .Net Developer</a></li>
-                <li><a href="https://www.dio.me/certificate/0C3AF02F" target="_blank" class="button">Deploy e Azure Functions</a></li>
-                <li><a href="https://www.dio.me/certificate/AABE6F7D" target="_blank" class="button">Frontend com ASP.NET MVC</a></li>
-                <li><a href="https://www.dio.me/certificate/A21DD0D8" target="_blank" class="button">Bancos de Dados Relacionais e Não Relacionais com SQL Server e MongoDB</a></li>
-                <li><a href="https://www.dio.me/certificate/82041E8D" target="_blank" class="button">Bootcamp: Pottencial .NET Developer</a></li>
-                <li><a href="https://www.dio.me/certificate/1D39DA16" target="_blank" class="button">Bootcamp: Decola Tech 2ª edição</a></li>
-            </ul>
-        </section>
-    </div>
+📱 (12) 98104-2192
+
+</p>
+
+<nav>
+
+<a href="https://github.com/danidevs" target="_blank">GitHub</a>
+
+<a href="https://linkedin.com/in/danidevs" target="_blank">LinkedIn</a>
+
+<a href="assets/Curriculo.pdf" target="_blank">Currículo PDF</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<section>
+
+<h2>🎯 Objetivo</h2>
+
+<p>
+
+Estudante de Análise e Desenvolvimento de Sistemas pela FMU,
+com foco em desenvolvimento Back-end utilizando C#, .NET e Java.
+
+Busco uma oportunidade de estágio  para contribuir com
+o desenvolvimento de software.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>💻 Competências Técnicas</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Linguagens</h3>
+
+<ul>
+
+<li>C#</li>
+
+<li>Java</li>
+
+<li>SQL</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Frameworks</h3>
+
+<ul>
+
+<li>ASP.NET MVC</li>
+
+<li>ASP.NET Web API</li>
+
+<li>Spring Boot</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Banco de Dados</h3>
+
+<ul>
+
+<li>SQL Server</li>
+
+<li>MongoDB</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Ferramentas</h3>
+
+<ul>
+
+<li>Git</li>
+
+<li>GitHub</li>
+
+<li>Azure</li>
+
+<li>VS Code</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🚀 Projetos</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Sistema de Estacionamento</h3>
+
+<p>
+
+Sistema completo em ASP.NET Core MVC para gestão
+de estacionamento.
+
+</p>
+
+<ul>
+
+<li>✔ Controle de Entrada/Saída</li>
+
+<li>✔ Fluxo de Caixa</li>
+
+<li>✔ Entity Framework</li>
+
+<li>✔ SQL Server</li>
+
+</ul>
+
+<a href="https://github.com/danidevs/ParkingManagementSystem.git" class="button">
+
+Ver Projeto
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Sistema de Navegação para Drones</h3>
+
+<p>
+
+Projeto em desenvolvimento voltado à navegação
+autônoma utilizando C#.
+
+</p>
+
+<ul>
+
+<li>✔ Planejamento de Rotas</li>
+
+<li>✔ Algoritmos</li>
+
+<li>✔ Arquitetura para eVTOL</li>
+
+</ul>
+
+<a href="https://github.com/danidevs/DroneNavigationSystem.git" class="button">
+
+Em desenvolvimento
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🎓 Formação</h2>
+
+<p>
+
+<strong>FMU</strong>
+
+</p>
+
+<p>
+
+Análise e Desenvolvimento de Sistemas
+
+</p>
+
+<p>
+
+Conclusão prevista: 2027
+
+</p>
+
+</section>
+
+<section>
+
+<h2>🏆 Certificados</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Impacta Tecnologia</h3>
+
+<p>Introdução à Plataforma .NET com C#</p>
+
+<a href="../certificados/certificadosimpacta-dotnet-csharp.pdf"
+class="button"
+target="_blank">
+
+Visualizar PDF
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Impacta Tecnologia</h3>
+
+<p>Desenvolvimento Web ASP.NET</p>
+
+<a href="../certificados/ Web ASP.NET-csharp.pdf"
+class="button"
+target="_blank">
+
+Visualizar PDF
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Impacta Tecnologia</h3>
+
+<p>Lógica de Programação</p>
+
+<a href="../certificados/ de Programação Aplicada à Linguagem-csharp.pdf"
+class="button"
+target="_blank">
+
+Visualizar PDF
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>💼 Experiência Profissional</h2>
+
+<h3>99 Tecnologia</h3>
+
+<p>
+
+Motorista Parceiro • 2019 – Atual
+
+</p>
+
+<ul>
+
+<li>Organização</li>
+
+<li>Gestão do Tempo</li>
+
+<li>Atendimento ao Cliente</li>
+
+<li>Responsabilidade</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+
+Daniel Rodrigues Silva © 2026
+
+</footer>
+
 </body>
 </html>
